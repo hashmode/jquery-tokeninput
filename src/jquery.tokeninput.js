@@ -59,6 +59,7 @@
     autoSelectFirstResult: false,
 
     // Callbacks
+    onSend: null,
     onResult: null,
     onCachedResult: null,
     onAdd: null,
@@ -1034,7 +1035,7 @@
 
                   // Provide a beforeSend callback
                   if (settings.onSend) {
-                    settings.onSend(ajax_params);
+                    settings.onSend(ajax_params, $(input));
                   }
 
                   // Make the request
